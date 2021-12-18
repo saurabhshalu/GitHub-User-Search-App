@@ -42,7 +42,8 @@ header {
   cursor: pointer;
 }
 
-.container-item {
+.container-item,
+.search-container {
   width: 100%;
   background: #1f2a48;
   border-radius: 10px;
@@ -52,7 +53,7 @@ header {
   padding: 10px 10px 10px 30px;
 }
 
-.container-item input {
+.search-container input {
   flex: 1;
   background-color: transparent;
   border: none;
@@ -62,7 +63,7 @@ header {
   outline: none;
 }
 
-.container-item button {
+.search-container button {
   padding: 15px 20px;
   border-radius: 10px;
   border: none;
@@ -71,7 +72,7 @@ header {
   font-weight: bold;
   cursor: pointer;
 }
-.container-item button:hover {
+.search-container button:hover {
   background-color: #0265df;
 }
 
@@ -176,6 +177,7 @@ header {
     display: none;
   }
   .container {
+    padding: 20px;
     min-width: 400px;
   }
   .imgInner {
@@ -191,5 +193,31 @@ header {
   }
   #created_at_inner {
     display: block;
+  }
+}
+
+@media (max-width: 360px) {
+  body {
+    display: unset;
+  }
+  .container {
+    all: unset;
+    padding: 20px;
+  }
+  .search-container {
+    all: unset;
+    margin: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .repos {
+    text-align: center;
+  }
+  .followers {
+    text-align: center;
+  }
+  .following {
+    text-align: center;
   }
 }
